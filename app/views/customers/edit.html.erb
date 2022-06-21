@@ -1,0 +1,6 @@
+<%= form_for @customer, url:{action:"update"} do |e| %>
+<%= render partial: "customers/form", :locals=>{:f => e} %>
+<p>
+<%= e.submit("update")%>
+</p>
+<% end %>

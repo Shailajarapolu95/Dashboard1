@@ -1,0 +1,25 @@
+<div class="col-md-6 col-xl-6">
+	<div class="card" id="container">
+		<div class="card-body">
+			<h5>Sports Details</h5>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th scope="col">Sports Name</th>
+						<th scope="col">Age</th>
+						<th scope="col">Address</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @sports.each do |f| %>
+					<tr>
+						<td><%= f.sports_name %></td>
+						<td><%= f.age%></td>
+						<td><%= f.address%>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

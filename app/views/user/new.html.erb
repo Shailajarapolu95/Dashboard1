@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<section class="vh-50 gradient-custom">
+  <div class="container py-5 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-light text-black" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <div>
+              <% if flash[:notice].present?%>
+              <%flash[:notice].each do |message| %>
+              <p class="text-danger"><%= message %></p>
+              <%end%>
+              <%end%>
+            </div>
+            <%# <%= form_with scope: :users, url: "/login", local: true do |form| %>
+            <%= form_for :user, url: '/users' do |form| %>
+            <form>
+              <div class="form-outline mb-2">
+                <strong><%= form.label :first_name %>&nbsp: &nbsp</strong>
+                <%= form.text_field :first_name ,placeholder: "Enter First Name"%>
+              </div>
+              <div class="form-outline mb-2">
+                <strong><%= form.label :last_name %>&nbsp: &nbsp</strong>
+                <%= form.text_field :last_name, placeholder: "Enter Last Name" %>
+              </div>
+              <div class="form-outline mb-2">
+                <strong><%= form.label :user_name %>&nbsp: &nbsp</strong>
+                <%= form.text_field :user_name, placeholder: "Enter User Name" %>
+              </div>
+              <!-- Email input -->
+              <div class="form-outline  m-2">
+                <strong><%= form.label :email %>&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:&nbsp&nbsp</strong>
+                <%= form.text_field :email , placeholder: "Enter Valid Email"%>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-2">
+                <strong><%= form.label :password %>&nbsp: &nbsp</strong>
+                <%= form.password_field :password , placeholder: "Enter Password" %>
+              </div>
+              <!-- Submit button -->
+              <%= submit_tag "Sign Up" %></br></br></br>
+              <strong>
+                Login&nbsp;here!
+              </strong>
+              <span>
+                <a class="nav-link" href="/login">Login</a>
+              </span>
+              <% end %>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</html>

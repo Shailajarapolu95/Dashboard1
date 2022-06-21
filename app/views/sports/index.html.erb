@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+      <div class="container bg-success">
+         <%= form_with scope: :sports, url: sports_path, local: true do |form| %>
+         <h1>Sports registration form</h1>
+         <div class="form-group p-2">
+            <strong><%= form.label :sports_name %></strong><br>
+            <%= form.text_field :sports_name, class: 'form-control bg-light' %>
+         </div>
+         <div class="form-group p-2">
+            <strong><%= form.label :age %></strong><br>
+            <%= form.text_field :age, class: 'form-control  bg-light' %>
+         </div>
+         <div class="form-group p-2">
+            <strong><%= form.label :address %></strong><br>
+            <%= form.text_field :address, class: 'form-control  bg-light' %>
+         </div>
+         <div class="form-group p-2">
+            <%= form.submit :submit, class: 'form-control btn-dark' %>
+         </div>
+         <% end %>
+         <a href="/admin">Back to Home</a>
+      </div>
+   </div>
+</div>
+</div>
+</body>
+
+</html>

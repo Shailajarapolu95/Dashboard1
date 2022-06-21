@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8" />
+    <title>Dashboard1</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+     <!-- App css -->
+    <link href="./css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+    <!-- icons -->
+    <link href="./css/app.min.css" rel="stylesheet" type="text/css" />
+    <%= javascript_importmap_tags %>
+    </head>
+
+  <body>
+   
+    <%= yield %>
+    <script src="./scripts/vendor.min.js.download"></script>
+              <!-- Chart JS -->
+              <script src="./scripts/Chart.bundle.min.js.download"></script>
+              <script src="./scripts/moment.min.js.download"></script>
+              <script src="./scripts/jquery.scrollTo.min.js.download"></script>
+              <!-- Chat app -->
+              <script src="./scripts/jquery.chat.js.download"></script>
+              <!-- Todo app -->
+              <script src="./scripts/jquery.todo.js.download"></script>
+              <!-- Dashboard init JS -->
+              <script src="./scripts/dashboard-3.init.js.download"></script>
+              <!-- App js-->
+              <script src="./scripts/app.min.js.download"></script>
+  </body>
+</html>

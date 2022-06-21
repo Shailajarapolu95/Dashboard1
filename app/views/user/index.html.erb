@@ -1,0 +1,19 @@
+<div class="text-center">
+  <% if current_user %>
+  <div><%= flash[:notice] if flash[:notice]%></div>
+  <%= render"mains/nav"%>
+  <%= render "mains/sidenav"%>
+  <%= render "mains/content"%>
+  <% else %>
+  <div class="card-body py-5 px-md-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="text-success p-3">To get into the Dashboard please sign up or login</h1>
+        <span class="text-bg-warning "><%= link_to 'Signup', '/signup'%></span><br>
+        <span class="text-bg-warning"> <%= link_to 'Login', '/login'%></span>
+      </div>
+    </div>
+  </div>
+  <div><%= flash[:notice] if flash[:notice]%></div>
+    <% end %>
+</div>

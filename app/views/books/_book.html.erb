@@ -1,0 +1,23 @@
+<div class="col-md-6 col-xl-6">
+    <div class="card" id="container">
+        <div class="card-body">
+            <h5>Book Details</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Book Name</th>
+                        <th scope="col">Author</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @books.each do |f| %>
+                    <tr>
+                        <td><%= f.bname %></td>
+                        <td><%= f.author%></td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
